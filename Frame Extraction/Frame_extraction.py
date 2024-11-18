@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from Frame_extraction_fucntion import extract_frames
 
 num_frames_to_extract = 20
@@ -13,4 +14,4 @@ for i, file_path in enumerate(video_files_list):
 
     #Split the filename at underscores and take the first part
     first_part = filename.split('_')[0]  # This will give "001"
-    extract_frames(file_path, num_frames_to_extract, f"argen_frames/{str(first_part)}/{i%50}")
+    extract_frames(file_path, num_frames_to_extract, f"Argentinian Sign Language Recognition/argen_frames/{str(first_part)}/{i%50}")
